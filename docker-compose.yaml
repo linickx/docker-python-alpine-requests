@@ -1,0 +1,8 @@
+version: '2'
+services:
+
+ py_pandas:
+    image: linickx/python-alpine-requests
+    entrypoint: python test.py
+    volumes:
+    - ./:/app/
