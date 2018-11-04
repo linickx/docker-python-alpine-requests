@@ -3,6 +3,14 @@ services:
 
  py_requests:
     image: linickx/python-alpine-requests
-    entrypoint: python test.py
+    command: test.py
+    volumes:
+    - ./:/app/
+
+ py_local:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: test.py
     volumes:
     - ./:/app/
